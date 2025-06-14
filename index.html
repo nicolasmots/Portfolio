@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nicolas Motshegwa</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1 class="logo">Nicolas Motshegwa</h1>
+
+      <!-- Hamburger icon -->
+      <button class="hamburger" id="hamburger-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Nav menu -->
+      <nav id="nav-menu">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+        </ul>
+      </nav>
+
+      <button id="mode-toggle">🌓</button>
+    </header>
+
+    <section class="hero" id="home">
+      <div class="hero-left">
+        <h3>WELCOME TO MY PORTFOLIO</h3>
+        <h1>
+          Hi, I am <span class="highlight">Nicolas Motshegwa</span
+          ><span class="cursor">|</span>
+        </h1>
+
+        <p>| HTML | CSS | JavaScript | Business Student |</p>
+
+        <div class="hero-buttons">
+          <a href="#contact" class="btn primary">📧 Contact Me</a>
+          <a href="#projects" class="btn secondary">🚀 View Projects</a>
+        </div>
+
+        <div class="socials">
+          <a
+            href="mailto:nicolasmotshegwa1@gmail.com"
+            target="_blank"
+            title="Email"
+          >
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/nicolas-motshegwa/"
+            target="_blank"
+            title="LinkedIn"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="https://github.com/nicolasmots"
+            target="_blank"
+            title="GitHub"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://instagram.com/sir_.nick"
+            target="_blank"
+            title="Instagram"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="image-glow">
+          <img
+            src="images/profile.jpg"
+            alt="Nicolas Motshegwa"
+            class="profile-pic"
+          />
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <section id="about" class="about-section">
+        <h2>About Me</h2>
+        <p>
+          I'm Nicolas Motshegwa, based in Selebi Phikwe, Botswana. I'm currently
+          a business student at Sheffield Hallam University in collaboration
+          with Botswana Accountancy College. I'm also an aspiring web developer
+          with strong skills in HTML, CSS, and JavaScript. I enjoy building
+          websites and aim to become a professional front-end developer. I am
+          currently learning mobile and web app development through the FNB App
+          Academy.
+        </p>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <p>Coming soon...</p>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <div class="card-container">
+          <div class="card">
+            <h3>Degree in Business Management</h3>
+            <p><strong>Start:</strong> 2022 | <strong>End:</strong> 2026</p>
+            <p>
+              Pursuing a degree in Business Management at Sheffield Hallam
+              University in partnership with BAC.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>BGCSE</h3>
+            <p><strong>Completed:</strong> 2021</p>
+            <p>Completed at Selebi Phikwe Senior Secondary School.</p>
+          </div>
+
+          <div class="card">
+            <h3>Web Development</h3>
+            <p>
+              <strong>FNB App Academy</strong> | <strong>Year:</strong> 2025
+            </p>
+            <p>Currently learning full-stack app development.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact section moved outside education -->
+      <section id="contact" class="contact-section">
+        <h2>Contact Me</h2>
+        <p>If you want to get in touch, please fill out the form below:</p>
+        <form
+          action="https://formspree.io/f/xkgbjgyp"
+          method="POST"
+          class="contact-form"
+        >
+          <label for="name">Name<span aria-hidden="true">*</span></label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your full name"
+            required
+          />
+
+          <label for="email">Email<span aria-hidden="true">*</span></label>
+          <input
+            type="email"
+            id="email"
+            name="_replyto"
+            placeholder="Your email address"
+            required
+          />
+
+          <label for="message">Message<span aria-hidden="true">*</span></label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="Write your message here"
+            required
+          ></textarea>
+
+          <button type="submit" class="btn primary">Send Message</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>&copy; 2025 Nicolas Motshegwa. All rights reserved.</footer>
+
+    <script>
+      const toggle = document.getElementById("mode-toggle");
+      toggle.addEventListener("click", () => {
+        document.body.classList.toggle("light-mode");
+      });
+
+      const hamburger = document.getElementById("hamburger-btn");
+      const navMenu = document.getElementById("nav-menu");
+
+      hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("show");
+      });
+    </script>
+  </body>
+</html>
