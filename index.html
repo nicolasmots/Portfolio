@@ -15,26 +15,19 @@
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap"
       rel="stylesheet"
     />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      integrity="sha512-..."
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
   </head>
-
   <body>
     <header>
       <h1 class="logo">Nicolas Motshegwa</h1>
-
-      <!-- Hamburger icon -->
       <button class="hamburger" id="hamburger-btn">
         <i class="fas fa-bars"></i>
       </button>
-
-      <!-- Nav menu -->
       <nav id="nav-menu">
         <ul>
           <li><a href="#home">Home</a></li>
@@ -43,57 +36,47 @@
           <li><a href="#education">Education</a></li>
         </ul>
       </nav>
-
-      <button id="mode-toggle">🌓</button>
     </header>
 
     <section class="hero" id="home">
       <div class="hero-left">
         <h3>WELCOME TO MY PORTFOLIO</h3>
         <h1>
-          Hi, I am <span class="highlight">Nicolas Motshegwa</span
+          Hi, I am <span id="typed-name" class="highlight"></span
           ><span class="cursor">|</span>
         </h1>
-
         <p>| HTML | CSS | JavaScript | Business Student |</p>
-
         <div class="hero-buttons">
           <a href="#contact" class="btn primary">📧 Contact Me</a>
           <a href="#projects" class="btn secondary">🚀 View Projects</a>
         </div>
-
         <div class="socials">
           <a
             href="mailto:nicolasmotshegwa1@gmail.com"
             target="_blank"
             title="Email"
-          >
-            <i class="fas fa-envelope"></i>
-          </a>
+            ><i class="fas fa-envelope"></i
+          ></a>
           <a
             href="https://www.linkedin.com/in/nicolas-motshegwa/"
             target="_blank"
             title="LinkedIn"
-          >
-            <i class="fab fa-linkedin"></i>
-          </a>
+            ><i class="fab fa-linkedin"></i
+          ></a>
           <a
             href="https://github.com/nicolasmots"
             target="_blank"
             title="GitHub"
-          >
-            <i class="fab fa-github"></i>
-          </a>
+            ><i class="fab fa-github"></i
+          ></a>
           <a
             href="https://instagram.com/sir_.nick"
             target="_blank"
             title="Instagram"
-          >
-            <i class="fab fa-instagram"></i>
-          </a>
+            ><i class="fab fa-instagram"></i
+          ></a>
         </div>
       </div>
-
       <div class="hero-right">
         <div class="image-glow">
           <img
@@ -121,15 +104,12 @@
 
       <section id="projects">
         <h2>Projects</h2>
-
-        <!-- Calculator App -->
         <div class="project">
           <h3>🧮 Calculator App</h3>
           <p>
             A simple calculator web app that performs basic arithmetic
-            operations like addition, subtraction, multiplication, and division.
-            Built during the FNB App Academy to practice JavaScript logic and
-            responsive layout.
+            operations. Built during the FNB App Academy to practice JavaScript
+            logic and responsive layout.
           </p>
           <ul>
             <li><strong>Tech Used:</strong> HTML, CSS, JavaScript</li>
@@ -146,8 +126,6 @@
             </li>
           </ul>
         </div>
-
-        <!-- Contact Book App -->
         <div class="project">
           <h3>📇 Contact Book App</h3>
           <p>
@@ -183,13 +161,11 @@
               University in partnership with BAC.
             </p>
           </div>
-
           <div class="card">
             <h3>BGCSE</h3>
             <p><strong>Completed:</strong> 2021</p>
             <p>Completed at Selebi Phikwe Senior Secondary School.</p>
           </div>
-
           <div class="card">
             <h3>Web Development</h3>
             <p>
@@ -200,7 +176,6 @@
         </div>
       </section>
 
-      <!-- Contact section moved outside education -->
       <section id="contact" class="contact-section">
         <h2>Contact Me</h2>
         <p>If you want to get in touch, please fill out the form below:</p>
@@ -209,7 +184,7 @@
           method="POST"
           class="contact-form"
         >
-          <label for="name">Name<span aria-hidden="true">*</span></label>
+          <label for="name">Name<span>*</span></label>
           <input
             type="text"
             id="name"
@@ -218,7 +193,7 @@
             required
           />
 
-          <label for="email">Email<span aria-hidden="true">*</span></label>
+          <label for="email">Email<span>*</span></label>
           <input
             type="email"
             id="email"
@@ -227,7 +202,7 @@
             required
           />
 
-          <label for="message">Message<span aria-hidden="true">*</span></label>
+          <label for="message">Message<span>*</span></label>
           <textarea
             id="message"
             name="message"
@@ -244,17 +219,24 @@
     <footer>&copy; 2025 Nicolas Motshegwa. All rights reserved.</footer>
 
     <script>
-      const toggle = document.getElementById("mode-toggle");
-      toggle.addEventListener("click", () => {
-        document.body.classList.toggle("light-mode");
+      document.getElementById("hamburger-btn").addEventListener("click", () => {
+        document.getElementById("nav-menu").classList.toggle("show");
       });
 
-      const hamburger = document.getElementById("hamburger-btn");
-      const navMenu = document.getElementById("nav-menu");
+      // Typing animation for the name
+      const typedName = document.getElementById("typed-name");
+      const nameText = "Nicolas Motshegwa";
+      let index = 0;
 
-      hamburger.addEventListener("click", () => {
-        navMenu.classList.toggle("show");
-      });
+      function typeName() {
+        if (index < nameText.length) {
+          typedName.textContent += nameText.charAt(index);
+          index++;
+          setTimeout(typeName, 100);
+        }
+      }
+
+      window.addEventListener("load", typeName);
     </script>
   </body>
 </html>
