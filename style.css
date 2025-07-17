@@ -50,6 +50,11 @@ a:hover {
   color: #00ffee;
 }
 
+.about-section p {
+  text-align: justify;
+}
+
+
 /* ===== Hero Section ===== */
 .hero {
   display: flex;
@@ -159,7 +164,9 @@ a:hover {
 #projects {
   text-align: center;
 }
-
+#education h2 {
+  text-align: center;
+}
 /* ===== Projects Section ===== */
 .project {
   margin-bottom: 2rem;
