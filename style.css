@@ -1,6 +1,8 @@
 /* ===== Global Settings ===== */
-*, *::before, *::after {
+* {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html {
@@ -8,17 +10,12 @@ html {
 }
 
 body {
-  margin: 0;
   font-family: 'Poppins', sans-serif;
   background-color: #121212;
   color: #ffffff;
   transition: background-color 0.3s, color 0.3s;
 }
 
-.light-mode {
-  background-color: #ffffff;
-  color: #121212;
-}
 
 /* ===== Header ===== */
 header {
@@ -31,10 +28,6 @@ header {
   top: 0;
   z-index: 10;
   transition: background-color 0.3s;
-}
-
-.light-mode header {
-  background-color: #f0f0f0;
 }
 
 .logo {
@@ -222,8 +215,6 @@ a:hover {
   text-decoration: underline;
 }
 
-
-
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -276,9 +267,6 @@ a:hover {
   color: #bbb;
 }
 
-.light-mode .contact-section p {
-  color: #666;
-}
 
 .contact-form {
   display: flex;
@@ -291,9 +279,6 @@ a:hover {
   color: #00ffee;
 }
 
-.light-mode .contact-form label {
-  color: #007b7b;
-}
 
 .contact-form input,
 .contact-form textarea {
@@ -306,22 +291,11 @@ a:hover {
   resize: vertical;
 }
 
-.light-mode .contact-form input,
-.light-mode .contact-form textarea {
-  background-color: #fff;
-  color: #121212;
-  border-color: #ccc;
-}
-
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
   color: #bbb;
 }
 
-.light-mode .contact-form input::placeholder,
-.light-mode .contact-form textarea::placeholder {
-  color: #999;
-}
 
 .contact-form input:focus,
 .contact-form textarea:focus {
@@ -329,11 +303,7 @@ a:hover {
   background-color: #222;
 }
 
-.light-mode .contact-form input:focus,
-.light-mode .contact-form textarea:focus {
-  background-color: #e6f7f7;
-  border-color: #00ffee;
-}
+
 
 .contact-form button {
   background-color: #00ffee;
@@ -359,10 +329,6 @@ footer {
   color: #aaa;
 }
 
-.light-mode footer {
-  background-color: #f0f0f0;
-  color: #333;
-}
 
 /* ===== Socials ===== */
 .socials {
@@ -380,13 +346,6 @@ footer {
   color: white;
 }
 
-.light-mode .socials a {
-  color: #121212;
-}
-
-.light-mode .socials a:hover {
-  color: #00ffee;
-}
 
 /* ===== Centered Section Headings ===== */
 #education,
